@@ -14,7 +14,7 @@
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.Runners.ytdlp</AssemblyName>
         <PackageId>Soenneker.Runners.ytdlp</PackageId>
-        <PackageTags>runners ytdlp ffmpeg youtube-dl youtube c# .net csharp dotnet</PackageTags>
+        <PackageTags>runners ytdlp ffmpeg youtube-dl youtube c# .net csharp dotnet yt-dlp</PackageTags>
         <Copyright>Copyright © 2023 Jake Soenneker</Copyright>
         <Authors>Jake Soenneker</Authors>
         <Company>https://soenneker.com</Company>

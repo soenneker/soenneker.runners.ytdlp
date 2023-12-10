@@ -96,6 +96,8 @@ public class FileOperationsUtil : IFileOperationsUtil
 
         _newHash = await Sha3Util.HashFile(filePath);
 
+        _logger.LogDebug("New hash: {newHash}, old hash: {oldHash}", _newHash, oldHash);
+
         if (oldHash == _newHash)
         {
             _logger.LogInformation("Hashes are equal, no need to update, exiting...");
