@@ -5,10 +5,10 @@ on:
   workflow_dispatch:
 
 env:
-  Username: ${{ secrets.USERNAME }}
-  Token: ${{ secrets.TOKEN }}
-  Name: ${{ secrets.NAME }}
-  Email: ${{ secrets.EMAIL }}
+  USERNAME: ${{ secrets.USERNAME }}
+  TOKEN: ${{ secrets.TOKEN }}
+  NAME: ${{ secrets.NAME }}
+  EMAIL: ${{ secrets.EMAIL }}
   NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
 
 jobs:
