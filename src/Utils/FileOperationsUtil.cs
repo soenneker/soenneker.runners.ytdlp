@@ -9,7 +9,7 @@ using Soenneker.Utils.Dotnet.NuGet.Abstract;
 using Soenneker.Utils.Environment;
 using Soenneker.Utils.File.Abstract;
 using Soenneker.Utils.FileSync.Abstract;
-using Soenneker.Utils.SHA3;
+using Soenneker.Utils.SHA3.Abstract;
 
 namespace Soenneker.Runners.ytdlp.Utils;
 
@@ -23,10 +23,11 @@ public class FileOperationsUtil : IFileOperationsUtil
     private readonly IFileUtil _fileUtil;
     private readonly IFileUtilSync _fileUtilSync;
     private readonly IDirectoryUtil _directoryUtil;
+    private readonly ISha3Util _sha3Util;
 
     private string? _newHash;
 
-    public FileOperationsUtil(IFileUtil fileUtil, ILogger<FileOperationsUtil> logger, IGitUtil gitUtil, IDotnetUtil dotnetUtil, IDotnetNuGetUtil dotnetNuGetUtil, IDirectoryUtil directoryUtil, IFileUtilSync fileUtilSync)
+    public FileOperationsUtil(IFileUtil fileUtil, ILogger<FileOperationsUtil> logger, IGitUtil gitUtil, IDotnetUtil dotnetUtil, IDotnetNuGetUtil dotnetNuGetUtil, IDirectoryUtil directoryUtil, IFileUtilSync fileUtilSync, ISha3Util sha3Util)
     {
         _fileUtil = fileUtil;
         _logger = logger;
@@ -35,6 +36,7 @@ public class FileOperationsUtil : IFileOperationsUtil
         _dotnetNuGetUtil = dotnetNuGetUtil;
         _directoryUtil = directoryUtil;
         _fileUtilSync = fileUtilSync;
+        _sha3Util = sha3Util;
     }
 
     public async ValueTask Process(string filePath)
@@ -94,7 +96,7 @@ public class FileOperationsUtil : IFileOperationsUtil
             return true;
         }
 
-        _newHash = await Sha3Util.HashFile(filePath);
+        _newHash = await _sha3Util.HashFile(filePath);
 
         _logger.LogDebug("New hash: {newHash}, old hash: {oldHash}", _newHash, oldHash);
 
