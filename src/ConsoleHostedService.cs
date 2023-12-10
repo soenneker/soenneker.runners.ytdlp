@@ -40,7 +40,7 @@ public class ConsoleHostedService : IHostedService
                 {
                     string filePath = await _downloadUtil.Download();
 
-                    await _fileOperationsUtil.Process(filePath); ;
+                    await _fileOperationsUtil.Process(filePath);
 
                     _logger.LogInformation("Complete!");
 
