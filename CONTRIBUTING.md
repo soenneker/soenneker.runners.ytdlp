@@ -1,11 +1,11 @@
-# Contributing to {Package:Name}
+# Contributing to Soenneker.Runners.ytdlp
 
 We're excited that you're interested in contributing. Before you get started, please take a moment to read through this guide to understand how you can contribute to the project.
 
 ## How to Contribute
 
 1. **Create an Issue**
-   - If you have a new feature idea, a bug report, or any other improvement suggestion, start by creating an issue on the [Issues](https://github.com/{GitHub:Username/{Package:Name}/issues) page.
+   - If you have a new feature idea, a bug report, or any other improvement suggestion, start by creating an issue on the [Issues](https://github.com/soenneker/soenneker.runners.ytdlp/issues) page.
    - Clearly describe the problem or enhancement you're proposing and provide as much detail as possible.
 
 2. **Fork the Repository**
@@ -14,7 +14,7 @@ We're excited that you're interested in contributing. Before you get started, pl
 3. **Clone the Repository**
    - Clone the repository to your local machine using the following command:
      ```
-     git clone https://github.com/{GitHub:Username}/{Package:Name}.git
+     git clone https://github.com/soenneker/soenneker.runners.ytdlp.git
      ```
 
 4. **Create a Branch**
@@ -42,7 +42,7 @@ We're excited that you're interested in contributing. Before you get started, pl
      ```
 
 9. **Create a Pull Request (PR)**
-   - Go to the [Pull Requests](https://github.com/{GitHub:Username/{Package:Name}/pulls) page of the original repository.
+   - Go to the [Pull Requests](https://github.com/soenneker/soenneker.runners.ytdlp/pulls) page of the original repository.
    - Click on "New Pull Request."
    - Select your forked repository and the branch with your changes.
    - Provide a clear title and description for your pull request.
@@ -54,4 +54,4 @@ We're excited that you're interested in contributing. Before you get started, pl
 11. **Merge**
    - Once your pull request is approved, it will be merged into the main branch.
 
-Thank you for contributing to {Package:Name}!
+Thank you for contributing to Soenneker.Runners.ytdlp!
