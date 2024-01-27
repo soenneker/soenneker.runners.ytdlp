@@ -41,7 +41,7 @@
 
     
     <ItemGroup>
-        <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="2.1.184" />
+        <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="2.1.186" />
 
         <PackageReference Include="Soenneker.Git.Util" Version="2.1.370" />
 
