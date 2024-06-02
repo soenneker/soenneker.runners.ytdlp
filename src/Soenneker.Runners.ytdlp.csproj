@@ -53,7 +53,7 @@
 
         <PackageReference Include="Soenneker.Utils.FileSync" Version="2.1.627" />
 
-        <PackageReference Include="Soenneker.Utils.HttpClientCache" Version="2.1.503" />
+        <PackageReference Include="Soenneker.Utils.HttpClientCache" Version="2.1.505" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
         <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
         <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
