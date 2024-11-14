@@ -45,7 +45,7 @@
 
         <PackageReference Include="Soenneker.Git.Util" Version="3.0.1803" />
 
-        <PackageReference Include="Soenneker.Utils.Dotnet" Version="3.0.1318" />
+        <PackageReference Include="Soenneker.Utils.Dotnet" Version="3.0.1319" />
 
         <PackageReference Include="Soenneker.Utils.Dotnet.NuGet" Version="3.0.1117" />
 
