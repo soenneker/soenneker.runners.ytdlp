@@ -43,21 +43,20 @@
     <ItemGroup>
         <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="3.0.652" />
 
-        <PackageReference Include="Soenneker.Git.Util" Version="3.0.1965" />
+        <PackageReference Include="Soenneker.Git.Util" Version="3.0.1968" />
 
         <PackageReference Include="Soenneker.Utils.Dotnet" Version="3.0.1423" />
 
-        <PackageReference Include="Soenneker.Utils.Dotnet.NuGet" Version="3.0.1206" />
+        <PackageReference Include="Soenneker.Utils.Dotnet.NuGet" Version="3.0.1208" />
 
         <PackageReference Include="Soenneker.Utils.Environment" Version="3.0.345" />
 
-        <PackageReference Include="Soenneker.Utils.FileSync" Version="3.0.1079" />
+        <PackageReference Include="Soenneker.Utils.FileSync" Version="3.0.1082" />
 
         <PackageReference Include="Soenneker.Utils.HttpClientCache" Version="3.0.1080" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
         <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
         <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
-        <PackageReference Include="Soenneker.Extensions.Configuration" Version="3.0.534" />
         <PackageReference Include="Soenneker.Utils.File" Version="3.0.1377" />
         <PackageReference Include="Soenneker.Utils.SHA3" Version="3.0.900" />
     </ItemGroup>
