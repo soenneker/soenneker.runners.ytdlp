@@ -40,7 +40,7 @@ public class ConsoleHostedService : IHostedService
                 {
                     string? filePath = await _fileDownloadUtil.Download("https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/latest/download/yt-dlp.exe", fileExtension: ".exe", cancellationToken: cancellationToken);
 
-                    await _fileOperationsUtil.Process(filePath, cancellationToken);
+                    await _fileOperationsUtil.Process(filePath!, cancellationToken);
 
                     _logger.LogInformation("Complete!");
 

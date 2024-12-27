@@ -9,7 +9,7 @@ env:
   TOKEN: ${{ secrets.TOKEN }}
   NAME: ${{ secrets.NAME }}
   EMAIL: ${{ secrets.EMAIL }}
-  NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+  NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
 
 jobs:
 
