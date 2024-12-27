@@ -1,7 +1,7 @@
 name: daily-automatic-update
 on:
   schedule:
-    - cron: "0 23 * * *"
+    - cron: "0 17 * * *"
   workflow_dispatch:
 
 env:
@@ -9,7 +9,7 @@ env:
   TOKEN: ${{ secrets.TOKEN }}
   NAME: ${{ secrets.NAME }}
   EMAIL: ${{ secrets.EMAIL }}
-  NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
+  NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
 
 jobs:
 
