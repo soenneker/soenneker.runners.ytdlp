@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Soenneker.Runners.ytdlp.Utils.Abstract;
+using Soenneker.Managers.Runners.Abstract;
 using Soenneker.Utils.File.Download.Abstract;
 
 namespace Soenneker.Runners.ytdlp;
@@ -14,18 +14,17 @@ public class ConsoleHostedService : IHostedService
     private readonly ILogger<ConsoleHostedService> _logger;
 
     private readonly IHostApplicationLifetime _appLifetime;
-    private readonly IFileOperationsUtil _fileOperationsUtil;
+    private readonly IRunnersManager _runnersManager;
     private readonly IFileDownloadUtil _fileDownloadUtil;
 
     private int? _exitCode;
 
-    public ConsoleHostedService(ILogger<ConsoleHostedService> logger, IHostApplicationLifetime appLifetime,
-        IFileOperationsUtil fileOperationsUtil, IFileDownloadUtil fileDownloadUtil)
+    public ConsoleHostedService(ILogger<ConsoleHostedService> logger, IHostApplicationLifetime appLifetime, IFileDownloadUtil fileDownloadUtil, IRunnersManager runnersManager)
     {
         _logger = logger;
         _appLifetime = appLifetime;
-        _fileOperationsUtil = fileOperationsUtil;
         _fileDownloadUtil = fileDownloadUtil;
+        _runnersManager = runnersManager;
     }
 
     public Task StartAsync(CancellationToken cancellationToken = default)
@@ -40,7 +39,7 @@ public class ConsoleHostedService : IHostedService
                 {
                     string? filePath = await _fileDownloadUtil.Download("https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/latest/download/yt-dlp.exe", fileExtension: ".exe", cancellationToken: cancellationToken);
 
-                    await _fileOperationsUtil.Process(filePath!, cancellationToken);
+                    await _runnersManager.PushIfChangesNeeded(filePath, Constants.FileName, Constants.Library, $"https://github.com/soenneker/{Constants.Library}", cancellationToken);
 
                     _logger.LogInformation("Complete!");
 
