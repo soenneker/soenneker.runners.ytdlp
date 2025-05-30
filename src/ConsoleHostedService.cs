@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Soenneker.Managers.Runners.Abstract;
+using Soenneker.Utils.Delay;
 using Soenneker.Utils.File.Download.Abstract;
 
 namespace Soenneker.Runners.ytdlp;
@@ -52,7 +53,7 @@ public class ConsoleHostedService : IHostedService
 
                     _logger.LogError(e, "Unhandled exception");
 
-                    await Task.Delay(2000, cancellationToken);
+                    await DelayUtil.Delay(2000, null, cancellationToken);
                     _exitCode = 1;
                 }
                 finally
