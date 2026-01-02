@@ -15,7 +15,7 @@
         <AssemblyName>Soenneker.Runners.ytdlp</AssemblyName>
         <PackageId>Soenneker.Runners.ytdlp</PackageId>
         <PackageTags>runners ytdlp ffmpeg youtube-dl youtube c# .net csharp dotnet yt-dlp</PackageTags>
-        <Copyright>Copyright © 2023-2025 Jake Soenneker</Copyright>
+        <Copyright>Copyright © 2023-2026 Jake Soenneker</Copyright>
         <Authors>Jake Soenneker</Authors>
         <Company>https://soenneker.com</Company>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
