@@ -20,7 +20,8 @@ public class ConsoleHostedService : IHostedService
 
     private int? _exitCode;
 
-    public ConsoleHostedService(ILogger<ConsoleHostedService> logger, IHostApplicationLifetime appLifetime, IFileDownloadUtil fileDownloadUtil, IRunnersManager runnersManager)
+    public ConsoleHostedService(ILogger<ConsoleHostedService> logger, IHostApplicationLifetime appLifetime, IFileDownloadUtil fileDownloadUtil,
+        IRunnersManager runnersManager)
     {
         _logger = logger;
         _appLifetime = appLifetime;
@@ -38,9 +39,11 @@ public class ConsoleHostedService : IHostedService
 
                 try
                 {
-                    string? filePath = await _fileDownloadUtil.Download("https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/latest/download/yt-dlp.exe", fileExtension: ".exe", cancellationToken: cancellationToken);
+                    string? filePath = await _fileDownloadUtil.Download("https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/latest/download/yt-dlp.exe",
+                        fileExtension: ".exe", cancellationToken: cancellationToken);
 
-                    await _runnersManager.PushIfChangesNeeded(filePath, Constants.FileName, Constants.Library, $"https://github.com/soenneker/{Constants.Library}", cancellationToken);
+                    await _runnersManager.PushIfChangesNeeded(filePath, Constants.FileName, Constants.Library,
+                        $"https://github.com/soenneker/{Constants.Library}", false, cancellationToken);
 
                     _logger.LogInformation("Complete!");
 
