@@ -45,6 +45,6 @@
         <PackageReference Include="Soenneker.Utils.Delay" Version="4.0.55" />
         <PackageReference Include="Soenneker.Utils.File.Download" Version="4.0.1489" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.3" />
-        <PackageReference Include="Soenneker.Managers.Runners" Version="4.0.1896" />
+        <PackageReference Include="Soenneker.Managers.Runners" Version="4.0.1897" />
     </ItemGroup>
 </Project>
