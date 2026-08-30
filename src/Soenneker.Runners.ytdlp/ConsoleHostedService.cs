@@ -50,6 +50,9 @@ public class ConsoleHostedService : IHostedService
                     string? filePath = await _fileDownloadUtil.Download("https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/latest/download/yt-dlp.exe",
                         fileExtension: ".exe", cancellationToken: cancellationToken);
 
+                    if (filePath is null)
+                        throw new InvalidOperationException("The yt-dlp executable could not be downloaded.");
+
                     await _runnersManager.PushIfChangesNeeded(filePath, Constants.FileName, Constants.Library,
                         $"https://github.com/soenneker/{Constants.Library}", false, cancellationToken);
 
