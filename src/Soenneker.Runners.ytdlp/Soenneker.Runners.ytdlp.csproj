@@ -39,13 +39,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="4.0.1394" />
-        <PackageReference Include="Soenneker.Utils.Delay" Version="4.0.90" />
-        <PackageReference Include="Soenneker.Utils.File.Download" Version="4.0.1773" />
+        <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="4.0.1399" />
+        <PackageReference Include="Soenneker.Utils.Delay" Version="4.0.91" />
+        <PackageReference Include="Soenneker.Utils.File.Download" Version="4.0.1775" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.12" />
-        <PackageReference Include="Soenneker.Managers.Runners" Version="4.0.2548" />
+        <PackageReference Include="Soenneker.Managers.Runners" Version="4.0.2550" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Soenneker.Enums.DeployEnvironment" Version="4.0.243" />
+        <PackageReference Include="Soenneker.Enums.DeployEnvironment" Version="4.0.244" />
     </ItemGroup>
 </Project>
