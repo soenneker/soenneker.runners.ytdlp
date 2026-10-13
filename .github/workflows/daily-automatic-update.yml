@@ -49,7 +49,7 @@ jobs:
         run: dotnet build src/Soenneker.Runners.ytdlp/Soenneker.Runners.ytdlp.csproj --configuration Release --no-restore
 
       - name: Log in to NuGet
-        uses: soenneker/nuget-resilient-login@v5
+        uses: soenneker/nuget-resilient-login@v6
         id: nuget-login
         with:
           user: soenneker
